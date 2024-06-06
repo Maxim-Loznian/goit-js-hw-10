@@ -23,7 +23,8 @@ const options = {
         if (selectedDate <= new Date()) {
             iziToast.error({
                 title: 'Error',
-                message: 'Please choose a date in the future'
+                message: 'Please choose a date in the future',
+                position: 'topRight' // Set position to top right
             });
             startButton.disabled = true;
         } else {
@@ -80,4 +81,4 @@ function updateTimer(days, hours, minutes, seconds) {
     hoursSpan.textContent = addLeadingZero(hours);
     minutesSpan.textContent = addLeadingZero(minutes);
     secondsSpan.textContent = addLeadingZero(seconds);
-}   
+}
